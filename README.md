@@ -4,7 +4,7 @@
 CT-CAPS is a Capsule Network-based feature extractor developed to detect specific characteristics of CT slices, followed by a Max Pooling Layer to convert slice-level feature maps into patientlevel ones. Finally, a stack of fully connected layers are added to make the final decision. The CT-CAPS is trained on a dataset of CT slices labeled by three experienced radiologists to determine slices demonstrating infection and slices without an evidence of infection. CT-CAPS framework benefits from a fast and timely labeling process, which is highly valuable when we are facing an early emergence of a new type of data.
 
 CT-CAPS utilizes segmented lung areas as the input of the model instead of the original CT scans. In  order to extract lung areas from the original CT images, a recently developed <a href="https://github.com/JoHof/lungmask"> U-Net based segmentation model</a> is used to preprocess the data. Besides segmenting the lung regions, all images are normalized between 0 and 1, and resized from the original size of [512,512] to [256,256] as the preprocessing step.
-
+<b>The detailed COVID-Facts's structure and methodology is explained in detail at</b> https://arxiv.org/abs/2010.16043 .
 <img src="https://github.com/ShahinSHH/CT-CAPS/blob/main/Figures/pipeline.png"/>
 
 <h3>Note : Please don’t use CT-CAPS as the self-diagnostic model without performing a clinical study and consulting with a medical specialist.</h3>
@@ -38,17 +38,17 @@ Make sure to have torch installed in your system. Otherwise you can't use the lu
 * Matplotlib
 
 ## Citation
-If you found this code and the related paper useful in your research, please consider citing:
+If you found the provided code and the related paper useful in your research, please consider citing:
 
 ```
 @article{Heidarian2020,
 archivePrefix = {arXiv},
-arxivId = {2010.16041},
-author = {Heidarian, Shahin and Afshar, Parnian and Enshaei, Nastaran and Naderkhani, Farnoosh and Oikonomou, Anastasia and Atashzar, S. Farokh and Fard, Faranak Babaki and Samimi, Kaveh and Plataniotis, Konstantinos N. and Mohammadi, Arash and Rafiee, Moezedin Javad},
-eprint = {2010.16041},
+arxivId = {2010.16043},
+author = {Heidarian, Shahin and Afshar, Parnian and Mohammadi, Arash and Rafiee, Moezedin Javad and Oikonomou, Anastasia and Plataniotis, Konstantinos N. and Naderkhani, Farnoosh},
+eprint = {2010.16043},
 month = {oct},
-title = {{COVID-FACT: A Fully-Automated Capsule Network-based Framework for Identification of COVID-19 Cases from Chest CT scans}},
-url = {http://arxiv.org/abs/2010.16041},
+title = {{CT-CAPS: Feature Extraction-based Automated Framework for COVID-19 Disease Identification from Chest CT Scans using Capsule Networks}},
+url = {http://arxiv.org/abs/2010.16043},
 year = {2020}
 }
 
