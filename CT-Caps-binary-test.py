@@ -36,6 +36,10 @@ import cv2
 from lungmask import mask #lung segmentation model
 import SimpleITK as sitk
 
+# Set the path based on your data directory
+data_path = r'Path to the folder including dicom files/'
+# Set the cut-off probability for the classification output (Default : 0.5)
+cutoff = 0.5
 
 K.set_image_data_format('channels_last')
 
@@ -283,9 +287,8 @@ model2.load_weights('binary-max-v4.h5')
 model2.summary()
 
 #%%
-data_path = r'/Users/shahinheidarian/Python Files/Corona/Annotation-SliceClassification/COVID-19 subjects/P101/'
-# lstFolders = sorted(os.listdir(data_path))
 model_sg = mask.get_model('unet','R231CovidWeb')
+
 #%% Testing
 print('Segmenting lung area...')
 lung_mask, ArrayDicom, lung = segment_lung(mask,model_sg,data_path)
@@ -294,7 +297,6 @@ print('Segmentation is Completed.')
 capsules = test_one_dicom(model_fe,lung)
 
 # Stage 2  
-cutoff = 0.5 #cut-off probability
 prob_one, pred_final = stage_two_output(capsules,model2,cutoff) 
 if pred_final==1 :
     prediction = 'COVID-19'
