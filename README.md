@@ -23,6 +23,9 @@ pip install git+https://github.com/JoHof/lungmask
 Make sure to have torch installed in your system. Otherwise you can't use the lungmask module.
 <a href = "https://pytorch.org">https://pytorch.org</a>
 
+A sample CT scan image with its corresponding segmented lung area using this algorithm is shown in the following image:
+<img src="https://github.com/ShahinSHH/CT-CAPS/blob/main/Figures/lung_segment.png"/>
+
 ## Requirements
 * Tested with (tensorflow-gpu 2 and keras-gpu 2.2.4) , and (tensorflow 1.14.0 and keras 2.2.4)<br>
 -- Try tensorflow.keras instead of keras if it doesn't work in your system.
