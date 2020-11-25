@@ -24,6 +24,7 @@ Make sure to have torch installed in your system. Otherwise you can't use the lu
 <a href = "https://pytorch.org">https://pytorch.org</a>
 
 A sample CT scan image with its corresponding segmented lung area using this algorithm is shown in the following image:
+
 <img src="https://github.com/ShahinSHH/CT-CAPS/blob/main/Figures/lung_segment.png"/>
 
 ## Requirements
