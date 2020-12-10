@@ -211,19 +211,6 @@ def max_vote(x):
 
 def test_one_dicom(model,X_test):
     # Test
-    # X_test_normal = np.zeros(X_test.shape)
-    # for i in range(X_test.shape[0]):
-    #    X_test_normal[i,:,:,:] = normalize_image(X_test[i,:,:,:])
-    # check the size    
-    if X_test_normal.shape[1] != 256: 
-         x_new = np.zeros((X_test_normal.shape[0],256,256,1))
-         for i in range(len(X_test_normal)):
-             x_new[i,:,:,0] = cv2.resize(X_test_normal[i,:,:,0],(256,256))
-         X_test_normal = x_new
-    
-    sum_seg = np.sum(np.sum(X_test,axis=1),axis=1) 
-    a = np.where(sum_seg[:,0] != 0) # to find out if lung exists or not
-    X_lung = X_test_normal[a]  
     
     capsules = np.zeros((1,32,16))
     
