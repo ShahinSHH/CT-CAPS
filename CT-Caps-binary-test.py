@@ -211,9 +211,9 @@ def max_vote(x):
 
 def test_one_dicom(model,X_test):
     # Test
-    X_test_normal = np.zeros(X_test.shape)
-    for i in range(X_test.shape[0]):
-        X_test_normal[i,:,:,:] = normalize_image(X_test[i,:,:,:])
+    # X_test_normal = np.zeros(X_test.shape)
+    # for i in range(X_test.shape[0]):
+    #    X_test_normal[i,:,:,:] = normalize_image(X_test[i,:,:,:])
     # check the size    
     if X_test_normal.shape[1] != 256: 
          x_new = np.zeros((X_test_normal.shape[0],256,256,1))
@@ -230,7 +230,7 @@ def test_one_dicom(model,X_test):
     if len(X_test_normal)==0:
         capsules[0] = np.zeros((32,16))-1
     else:
-        x_capsule = model.predict(X_lung)
+        x_capsule = model.predict(X_test)
         capsules[0] = max_vote(x_capsule)
       
     return capsules
