@@ -7,7 +7,7 @@ CT-CAPS utilizes segmented lung areas as the input of the model instead of the o
 <b>The detailed COVID-Facts's structure and methodology is explained in detail at</b> https://arxiv.org/abs/2010.16043 .
 
 <h3>UPDATE : </h3> The CT-CAPS paper has been accepted at the <a href="https://2021.ieeeicassp.org">ICASSP 2021</a> conference, and will be accessible through the IEEE Xplore Digital Library.
-
+<br>
 <img src="https://github.com/ShahinSHH/CT-CAPS/blob/main/Figures/pipeline.png"/>
 
 <h3>Note : Please don’t use CT-CAPS as the self-diagnostic model without performing a clinical study and consulting with a medical specialist.</h3>
