@@ -6,7 +6,7 @@ CT-CAPS is a Capsule Network-based feature extractor developed to detect specifi
 CT-CAPS utilizes segmented lung areas as the input of the model instead of the original CT scans. In  order to extract lung areas from the original CT images, a recently developed <a href="https://github.com/JoHof/lungmask"> U-Net based segmentation model</a> is used to preprocess the data. Besides segmenting the lung regions, all images are normalized between 0 and 1, and resized from the original size of [512,512] to [256,256] as the preprocessing step.
 <b>The detailed COVID-Facts's structure and methodology is explained in detail at</b> https://arxiv.org/abs/2010.16043 .
 
-<b>UPDATE : </b> The CT-CAPS paper has been accepted at the <a href="https://2021.ieeeicassp.org">ICASSP 2021</a> conference, and will be accessible through the IEEE Xplore Digital Library.
+<h3>UPDATE : </h3> The CT-CAPS paper has been accepted at the <a href="https://2021.ieeeicassp.org">ICASSP 2021</a> conference, and will be accessible through the IEEE Xplore Digital Library.
 
 <img src="https://github.com/ShahinSHH/CT-CAPS/blob/main/Figures/pipeline.png"/>
 
